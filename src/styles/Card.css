@@ -1,0 +1,23 @@
+.Card {
+  width: 520px;
+  background-color: red;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Card div p {
+  font-family: 'Nunito-bold';
+  font-size: 40px;
+  color: white;
+}

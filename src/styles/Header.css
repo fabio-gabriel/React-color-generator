@@ -1,0 +1,15 @@
+.Header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin: 10px 20px;
+}
+
+.title {
+  font-family: 'Nunito-bold';
+  font-size: 40px;
+  color: white;
+}

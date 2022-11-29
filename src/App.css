@@ -1,5 +1,19 @@
+body {
+  background-color: #031B26;
+}
+
+@font-face {
+  font-family: "Nunito-light";
+  src: local("NunitoSans-Regular.ttf"), url("./fonts/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Nunito-bold";
+  src: local("NunitoSans-Bold.ttf"), url("./fonts/NunitoSans-Bold.ttf");
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +49,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 520px;
+  margin: 120px auto;
 }
