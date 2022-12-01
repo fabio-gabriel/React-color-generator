@@ -1,10 +1,11 @@
 import '../../src/styles/ActionButton.css'
 
-function ActionButton() {
+function ActionButton({generateHexColor}) {
+
   return (
     <div className='ActionButton'>
       <h3>Click on the button to generate a new random color!</h3>
-      <button>
+      <button onClick={generateHexColor}>
         Heloo
       </button>
     </div>

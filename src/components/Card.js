@@ -4,7 +4,7 @@ function Card() {
   return (
     <div className="Card">
       <div>
-        <p>#FFFFFF</p>
+        <p>{color}</p>
       </div>
     </div>
   )
