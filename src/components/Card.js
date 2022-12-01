@@ -1,8 +1,8 @@
 import '../../src/styles/Card.css'
 
-function Card() {
+function Card({styling, color}) {
   return (
-    <div className="Card">
+    <div className="Card" style={styling}>
       <div>
         <p>{color}</p>
       </div>

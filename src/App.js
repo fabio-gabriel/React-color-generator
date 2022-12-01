@@ -6,6 +6,9 @@ import {useState} from "react"
 
 function App() {
   const [color, setColor] = useState('#FFFFFF')
+  let styling = {
+    backgroundColor: color,
+  }
 
   const generateHexColor = () => {
     let string = '1234567890abcdef'
@@ -16,11 +19,8 @@ function App() {
     }
 
     setColor('#' + newColor)
-  }
-
-  const changeColor = () => {
-    let styling = {
-      backgroundColor: color,
+    styling = {
+      backgroundColor: newColor,
     }
   }
 
@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <Header />
       <div className='panel'>
-        <Card color={color} />
+        <Card styling={styling} color={color}/>
         <ActionButton generateHexColor={generateHexColor} />
       </div>
     </div>
