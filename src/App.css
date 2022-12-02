@@ -12,10 +12,6 @@ body {
   src: local("NunitoSans-Bold.ttf"), url("./fonts/NunitoSans-Bold.ttf");
 }
 
-.App {
-  height: 100vh;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;

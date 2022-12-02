@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header.js";
 import Card from "./components/Card.js";
 import ActionButton from "./components/ActionButton.js";
 import { useState } from "react";
@@ -26,7 +25,6 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <div className="panel">
         <Card styling={styling} color={color} />
         <ActionButton generateHexColor={generateHexColor} />
