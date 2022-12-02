@@ -1,33 +1,16 @@
 import "./App.css";
 import Card from "./components/Card.js";
 import ActionButton from "./components/ActionButton.js";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function App() {
-  const [color, setColor] = useState("#FFFFFF");
-  let styling = {
-    backgroundColor: color,
-  };
-
-  const generateHexColor = () => {
-    let string = "1234567890abcdef";
-    let newColor = "";
-
-    for (let i = 0; i < 6; i++) {
-      newColor += string[Math.floor(Math.random() * string.length)];
-    }
-
-    setColor("#" + newColor);
-    styling = {
-      backgroundColor: newColor,
-    };
-  };
+  const call = useRef(null)
 
   return (
     <div className="App">
       <div className="panel">
-        <Card styling={styling} color={color} />
-        <ActionButton generateHexColor={generateHexColor} />
+        <Card ref={call} />
+        <ActionButton callCard = {() => call.current.} />
       </div>
     </div>
   );
