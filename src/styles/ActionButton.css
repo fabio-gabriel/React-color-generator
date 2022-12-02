@@ -1,6 +1,34 @@
 .ActionButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 40%;
   color: #FFFFFF;
   font-size: 30px;
   text-align: center;
+}
+
+.ActionButton button {
+  border: none;
+  width: fit-content;
+  border-radius: 5px;
+  background-color: #61DBFB;
+  font-size: 30px;
+  font-family: 'Nunito-bold';
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.ActionButton .centerButton {
+  width: 100%;
+  height: 40px;
+  align-items: center;
+}
+
+.ActionButton .centerButton button:active {
+  padding: 8px 15px;
+  margin-top: 5px;
+  font-size: 25px;
 }
