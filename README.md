@@ -8,4 +8,4 @@ This is a small program to generate random hexadecimal colors using react.js com
 
 ## Page link
 
-fabio-gabriel.github.io/react
+https://fabio-gabriel.github.io/React-color-generator/
