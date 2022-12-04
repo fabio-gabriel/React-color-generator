@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/React-color-generator/static/css/main.362e07d1.css",
+    "main.js": "/React-color-generator/static/js/main.d52bbbca.js",
+    "static/js/787.97a945da.chunk.js": "/React-color-generator/static/js/787.97a945da.chunk.js",
+    "static/media/NunitoSans-Bold.ttf": "/React-color-generator/static/media/NunitoSans-Bold.022586a78ea7c9bee9da.ttf",
+    "static/media/NunitoSans-Regular.ttf": "/React-color-generator/static/media/NunitoSans-Regular.a427ddbe4dc20889d6e0.ttf",
+    "index.html": "/React-color-generator/index.html",
+    "main.362e07d1.css.map": "/React-color-generator/static/css/main.362e07d1.css.map",
+    "main.d52bbbca.js.map": "/React-color-generator/static/js/main.d52bbbca.js.map",
+    "787.97a945da.chunk.js.map": "/React-color-generator/static/js/787.97a945da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.362e07d1.css",
+    "static/js/main.d52bbbca.js"
+  ]
+}
