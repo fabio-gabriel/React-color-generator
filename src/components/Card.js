@@ -1,12 +1,17 @@
+import ColorContext from "../contexts/ColorContext";
 import "../styles/Card.css";
 
-function Card({ styling, color }) {
+function Card() {
   return (
-    <div className="Card" style={styling}>
-      <div>
-        <p>{color}</p>
-      </div>
-    </div>
+    <ColorContext.Consumer>
+      {(context) => (
+        <div className="Card">
+          <div>
+            <p>{context.color}</p>
+          </div>
+        </div>
+      )}
+    </ColorContext.Consumer>
   );
 }
 
