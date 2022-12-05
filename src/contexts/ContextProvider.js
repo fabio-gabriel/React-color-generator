@@ -1,8 +1,11 @@
 import ColorContext from "./ColorContext";
+import { useState } from "react";
 
 function ContextProvider(props) {
+  const [color, setColor] = useState("#FFFFFF");
+
   let state = {
-    color: "#FFFFFF",
+    color: color,
   };
   state.styling = {
     backgroundColor: state.color,
@@ -16,7 +19,7 @@ function ContextProvider(props) {
       newColor += string[Math.floor(Math.random() * string.length)];
     }
 
-    state.color = "#" + newColor;
+    setColor("#" + newColor);
     state.styling = {
       backgroundColor: newColor,
     };
