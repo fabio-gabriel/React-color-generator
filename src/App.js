@@ -5,14 +5,14 @@ import ContextProvider from "./contexts/ContextProvider";
 
 function App() {
   return (
-    <ContextProvider >
+    <ContextProvider>
       <div className="App">
         <div className="panel">
           <Card />
           <ActionButton />
         </div>
       </div>
-    </ContextProvider >
+    </ContextProvider>
   );
 }
 

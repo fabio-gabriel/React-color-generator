@@ -1,14 +1,11 @@
 import ColorContext from "./ColorContext";
 
-function ContextProvider() {
-  let color = "#FFFFFF";
-  let styling = {
-    backgroundColor: color,
-  };
-
+function ContextProvider(props) {
   let state = {
-    color: color,
-    styling: styling,
+    color: "#FFFFFF",
+  };
+  state.styling = {
+    backgroundColor: state.color,
   };
 
   const generateHexColor = () => {
@@ -32,7 +29,9 @@ function ContextProvider() {
         color: state.color,
         generateHexColor,
       }}
-    ></ColorContext.Provider>
+    >
+      {props.children}
+    </ColorContext.Provider>
   );
 }
 

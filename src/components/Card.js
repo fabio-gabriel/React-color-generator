@@ -1,17 +1,16 @@
 import ColorContext from "../contexts/ColorContext";
 import "../styles/Card.css";
+import { useContext } from "react";
 
 function Card() {
+  const Context = useContext(ColorContext);
+
   return (
-    <ColorContext.Consumer>
-      {(context) => (
-        <div className="Card">
-          <div>
-            <p>{context.color}</p>
-          </div>
+      <div className="Card" style={Context.styling}>
+        <div>
+          <p>{Context.color}</p>
         </div>
-      )}
-    </ColorContext.Consumer>
+      </div>
   );
 }
 

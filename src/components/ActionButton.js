@@ -1,18 +1,17 @@
 import ColorContext from "../contexts/ColorContext";
 import "../styles/ActionButton.css";
+import { useContext } from "react";
 
 function ActionButton() {
+  const Context = useContext(ColorContext);
+
   return (
-    <ColorContext.Consumer>
-      {(context) => (
-        <div className="ActionButton">
-          <h3>Click on the button to generate a new random color!</h3>
-          <div className="centerButton">
-            <button onClick={context.generateHexColor}>Generate</button>
-          </div>
-        </div>
-      )}
-    </ColorContext.Consumer>
+    <div className="ActionButton">
+      <h3>Click on the button to generate a new random color!</h3>
+      <div className="centerButton">
+        <button onClick={Context.generateHexColor}>Generate</button>
+      </div>
+    </div>
   );
 }
 
