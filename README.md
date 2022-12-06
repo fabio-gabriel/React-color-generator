@@ -19,4 +19,4 @@ The props method is the standard method of communication, it is a direct connect
 
 Knowing this, we can make sibling components communicate using their parents as an intermediary.
 
-![Tux, the Linux mascot](/images/Group%201.png)
+![Communication using the parent as intermediary](/images/Group%201.png)
