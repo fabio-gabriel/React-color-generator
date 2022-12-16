@@ -1,3 +1,5 @@
+import * as actions from "../actions";
+
 const generateHexColor = () => {
   let string = "1234567890ABCDEF";
   let newColor = "";
@@ -11,7 +13,7 @@ const generateHexColor = () => {
 
 export const cardReducer = (state = "#FFFFFF", action) => {
   switch (action.type) {
-    case "NewColor":
+    case actions.NEW_COLOR:
       return (state = generateHexColor());
       break;
     default:

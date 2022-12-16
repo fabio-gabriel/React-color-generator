@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import Container from "./Container";
+import * as actions from "../actions";
 
 const mapStateToProps = (state) => {
   return {
@@ -10,7 +11,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleColorChange: () => dispatch({ type: "NewColor" }),
+    handleColorChange: () => dispatch({ type: actions.NEW_COLOR }),
   };
 };
 
