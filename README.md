@@ -6,6 +6,7 @@ Methods of communication used:
 
 - Props
 - Context API
+- Redux
 
 Each will be found in its own branch of the repository.
 
