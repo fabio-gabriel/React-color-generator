@@ -1,0 +1,40 @@
+nav ul {
+  height: 200px;
+  width: 40vw;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: #F0F0F0;
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+nav ul li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li span {
+  display: flex;
+  align-items: center;
+}
+
+.color-bubble {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: red;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.list-item-name {
+  font-size: calc(10px + 2vmin);
+  padding-left: 10px;
+}
+
+.clipboard-button {
+  float: right;
+}

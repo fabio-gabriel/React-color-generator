@@ -52,5 +52,10 @@ body {
   justify-content: space-between;
   width: 80vw;
   height: 520px;
-  margin: 120px auto;
+  margin: 120px auto 20px;
+}
+
+.colors-list {
+  display: flex;
+  justify-content: center;
 }
