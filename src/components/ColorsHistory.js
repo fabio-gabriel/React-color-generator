@@ -9,10 +9,11 @@ export default function ColorsHistory({ colors }) {
           let style = { backgroundColor: item.color };
           return (
             <li>
-              <span>
+              <span className="list-item-info">
                 <span className="color-bubble" style={style}></span>
                 <span className="list-item-name"> {item.color} </span>
               </span>
+              <span className="time">{item.time}</span>
               <button
                 className="clipboard-button"
                 onClick={() => {
@@ -20,8 +21,7 @@ export default function ColorsHistory({ colors }) {
                   alert("Color copied to clipboard!");
                 }}
               >
-                {" "}
-                Copy to clipboard{" "}
+                Copy to clipboard
               </button>
             </li>
           );
