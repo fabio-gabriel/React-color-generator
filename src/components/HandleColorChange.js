@@ -7,7 +7,6 @@ import ColorsHistory from "./ColorsHistory";
 const mapStateToProps = (state) => {
   return {
     color: state.card.colors[0].color,
-    styling: { backgroundColor: state.card.colors[0].color },
   };
 };
 

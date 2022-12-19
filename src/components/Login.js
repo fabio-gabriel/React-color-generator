@@ -1,7 +1,6 @@
 import "../styles/Login.css";
 
 export default function Login({ user, handleLogin, handleLogout }) {
-  let loggedIn = user.loggedIn;
   let button;
   if (user.loggedIn) {
     button = <button onClick={handleLogout} className="logout-button"> Log out </button>;
