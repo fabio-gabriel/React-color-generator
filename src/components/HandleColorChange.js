@@ -6,14 +6,14 @@ import ColorsHistory from "./ColorsHistory";
 
 const mapStateToProps = (state) => {
   return {
-    color: state.colors[0].color,
-    styling: { backgroundColor: state.colors[0].color },
+    color: state.card.colors[0].color,
+    styling: { backgroundColor: state.card.colors[0].color },
   };
 };
 
 const mapColorListToProps = (state) => {
   return {
-    colors: state.colors,
+    colors: state.card.colors,
   };
 };
 
@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch) => {
 
 export const WrapperCard = connect(mapStateToProps)(Card);
 export const WrapperActionButton = connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(ActionButton);
 export const WrapperColorsHistory = connect(mapColorListToProps)(ColorsHistory);

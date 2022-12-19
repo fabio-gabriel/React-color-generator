@@ -1,6 +1,6 @@
 import { legacy_createStore } from "redux";
-import { cardReducer } from "./components/cardReducer";
+import rootReducer from "./components/reducers/index";
 
-let store = legacy_createStore(cardReducer);
+let store = legacy_createStore(rootReducer);
 
 export default store;

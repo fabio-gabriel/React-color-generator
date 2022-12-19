@@ -1,4 +1,4 @@
-import * as actions from "../actions";
+import * as actions from "../../actions";
 
 function formatDate() {
   const date = new Date();
@@ -6,14 +6,6 @@ function formatDate() {
     date.getHours() < 10 ? "0" + date.getHours() : date.getHours()
   }:${date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes()}`;
 }
-
-let initialState = {
-  colors: [{ color: "#FFFFFF", time: formatDate() }],
-  user: {
-    loggedIn: false,
-    name: "Please Log In",
-  },
-};
 
 const generateHexColor = () => {
   let string = "1234567890ABCDEF";
@@ -24,6 +16,10 @@ const generateHexColor = () => {
   }
 
   return "#" + newColor;
+};
+
+let initialState = {
+  colors: [{ color: "#FFFFFF", time: formatDate() }],
 };
 
 export const cardReducer = (state = initialState, action) => {

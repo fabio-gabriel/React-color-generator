@@ -4,13 +4,14 @@ import {
   WrapperCard,
   WrapperColorsHistory,
 } from "./components/HandleColorChange";
-import ColorsHistory from "./components/ColorsHistory";
+import Header from "./components/Header";
 import { Provider } from "react-redux";
 import store from "./store.js";
 
 function App() {
   return (
     <Provider store={store}>
+      <Header />
       <div className="App">
         <div className="panel">
           <WrapperCard />
