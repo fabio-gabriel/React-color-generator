@@ -1,4 +1,11 @@
 import "../styles/Card.css";
+import { connect } from "react-redux";
+
+const mapStateToProps = (state) => {
+  return {
+    color: state.card.colors[0].color,
+  };
+};
 
 function Card({ color }) {
   const styling = { backgroundColor: color };
@@ -12,4 +19,4 @@ function Card({ color }) {
   );
 }
 
-export default Card;
+export default connect(mapStateToProps)(Card);

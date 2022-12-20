@@ -1,4 +1,12 @@
 import "../styles/ActionButton.css";
+import { connect } from "react-redux";
+import * as actions from "../actions";
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleColorChange: () => dispatch({ type: actions.NEW_COLOR }),
+  };
+};
 
 function ActionButton({ handleColorChange }) {
   return (
@@ -11,4 +19,4 @@ function ActionButton({ handleColorChange }) {
   );
 }
 
-export default ActionButton;
+export default connect(null, mapDispatchToProps)(ActionButton);

@@ -1,7 +1,14 @@
 import "../styles/ColorsHistory.css";
 import clipboard from "./clipboard";
+import { connect } from "react-redux";
 
-export default function ColorsHistory({ colors }) {
+const mapColorListToProps = (state) => {
+  return {
+    colors: state.card.colors,
+  };
+};
+
+function ColorsHistory({ colors }) {
   return (
     <nav>
       <ul>
@@ -30,3 +37,5 @@ export default function ColorsHistory({ colors }) {
     </nav>
   );
 }
+
+export default connect(mapColorListToProps)(ColorsHistory);

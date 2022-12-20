@@ -1,9 +1,7 @@
 import "./App.css";
-import {
-  WrapperActionButton,
-  WrapperCard,
-  WrapperColorsHistory,
-} from "./components/HandleColorChange";
+import ActionButton from "./components/ActionButton";
+import Card from "./components/Card";
+import ColorsHistory from "./components/ColorsHistory";
 import Header from "./components/Header";
 import { Provider } from "react-redux";
 import store from "./store.js";
@@ -14,11 +12,11 @@ function App() {
       <Header />
       <div className="App">
         <div className="panel">
-          <WrapperCard />
-          <WrapperActionButton />
+          <Card />
+          <ActionButton />
         </div>
         <div className="colors-list">
-          <WrapperColorsHistory />
+          <ColorsHistory />
         </div>
       </div>
     </Provider>

@@ -1,5 +1,5 @@
 import "../styles/Header.css";
-import { WrapperLogin } from "./HandleLogin";
+import Login from "./Login";
 
 function Header({}) {
   return (
@@ -16,7 +16,7 @@ function Header({}) {
         />
         <h1 className="title">Color generator</h1>
       </div>
-      <WrapperLogin />
+      <Login />
     </header>
   );
 }
