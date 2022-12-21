@@ -4,11 +4,19 @@ import { useState } from "react";
 function ContextProvider(props) {
   const [color, setColor] = useState("#FFFFFF");
 
+  function formatDate() {
+    const date = new Date();
+    return `${date.getFullYear()}-${date.getMonth()}-${date.getDay()} ${
+      date.getHours() < 10 ? "0" + date.getHours() : date.getHours()
+    }:${date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes()}`;
+  }
+
   let state = {
-    color: color,
-  };
-  state.styling = {
-    backgroundColor: state.color,
+    colors: [{ color: "#FFFFFF", time: formatDate() }],
+    user: {
+      loggedIn: false,
+      name: "Please Log In",
+    },
   };
 
   const generateHexColor = () => {
@@ -19,17 +27,14 @@ function ContextProvider(props) {
       newColor += string[Math.floor(Math.random() * string.length)];
     }
 
-    setColor("#" + newColor);
-    state.styling = {
-      backgroundColor: newColor,
-    };
+    state.colors.unshift({ color: newColor, time: formatDate() });
   };
 
   return (
     <ColorContext.Provider
       value={{
-        styling: state.styling,
-        color: state.color,
+        user: state.user,
+        colors: state.colors,
         generateHexColor,
       }}
     >
