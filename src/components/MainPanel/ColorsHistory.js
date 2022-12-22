@@ -1,9 +1,10 @@
-import "../styles/ColorsHistory.css";
-import clipboard from "./clipboard";
-import { ColorContext } from "../contexts/ColorContext";
+import "../../styles/ColorsHistory.css";
+import clipboard from "../clipboard";
+import { ColorContext } from "../../contexts/ColorContext";
 import { useContext } from "react";
+import { memo } from "react";
 
-export default function ColorsHistory({ colors }) {
+function ColorsHistory({ colors }) {
   const Context = useContext(ColorContext);
 
   return (
@@ -34,3 +35,5 @@ export default function ColorsHistory({ colors }) {
     </nav>
   );
 }
+
+export default memo(ColorsHistory);

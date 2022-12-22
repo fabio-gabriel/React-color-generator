@@ -1,5 +1,7 @@
 import "../styles/Header.css";
 import Login from "./Login";
+import LoginContext from "../contexts/LoginContext";
+import { memo } from "react";
 
 function Header({}) {
   return (
@@ -16,9 +18,11 @@ function Header({}) {
         />
         <h1 className="title">Color generator</h1>
       </div>
-      <Login />
+      <LoginContext>
+        <Login />
+      </LoginContext>
     </header>
   );
 }
 
-export default Header;
+export default memo(Header);

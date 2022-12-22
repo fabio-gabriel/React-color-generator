@@ -2,7 +2,7 @@ import { useState, createContext } from "react";
 
 export const ColorContext = createContext();
 
-function ContextProvider(props) {
+export default function ColorProvider(props) {
   const [colors, setColor] = useState([
     { color: "#FFFFFF", time: formatDate() },
   ]);
@@ -14,10 +14,6 @@ function ContextProvider(props) {
     }:${date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes()}`;
   }
 
-  let state = {
-    colors: colors,
-  };
-
   const generateHexColor = () => {
     let string = "1234567890ABCDEF";
     let newColor = "";
@@ -27,6 +23,10 @@ function ContextProvider(props) {
     }
 
     setColor([{ color: "#" + newColor, time: formatDate() }, ...state.colors]);
+  };
+
+  let state = {
+    colors: colors,
   };
 
   return (
@@ -40,5 +40,3 @@ function ContextProvider(props) {
     </ColorContext.Provider>
   );
 }
-
-export default ContextProvider;

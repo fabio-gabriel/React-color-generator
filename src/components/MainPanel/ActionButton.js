@@ -1,9 +1,12 @@
-import { ColorContext } from "../contexts/ColorContext";
-import "../styles/ActionButton.css";
+import { ColorContext } from "../../contexts/ColorContext";
+import "../../styles/ActionButton.css";
 import { useContext } from "react";
+import { memo } from "react";
 
 function ActionButton() {
   const Context = useContext(ColorContext);
+
+  console.log("rerender");
 
   return (
     <div className="ActionButton">
@@ -15,4 +18,4 @@ function ActionButton() {
   );
 }
 
-export default ActionButton;
+export default memo(ActionButton);

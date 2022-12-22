@@ -1,6 +1,7 @@
-import { ColorContext } from "../contexts/ColorContext";
-import "../styles/Card.css";
+import { ColorContext } from "../../contexts/ColorContext";
+import "../../styles/Card.css";
 import { useContext } from "react";
+import { memo } from "react";
 
 function Card() {
   const Context = useContext(ColorContext);
@@ -15,4 +16,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default memo(Card);
