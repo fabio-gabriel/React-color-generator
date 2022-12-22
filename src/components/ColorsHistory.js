@@ -12,7 +12,7 @@ export default function ColorsHistory({ colors }) {
         {Context.colors.map((item) => {
           let style = { backgroundColor: item.color };
           return (
-            <li key={item}>
+            <li key={item.color}>
               <span className="list-item-info">
                 <span className="color-bubble" style={style}></span>
                 <span className="list-item-name"> {item.color} </span>

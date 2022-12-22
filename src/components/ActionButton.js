@@ -9,7 +9,7 @@ function ActionButton() {
     <div className="ActionButton">
       <h3>Click on the button to generate a new random color!</h3>
       <div className="centerButton">
-        <button onClick={Context.generateHexColor}>Generate</button>
+        <button onMouseDown={Context.generateHexColor}>Generate</button>
       </div>
     </div>
   );
