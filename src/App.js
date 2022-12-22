@@ -3,12 +3,15 @@ import Card from "./components/Card.js";
 import ActionButton from "./components/ActionButton.js";
 import Header from "./components/Header";
 import ColorsHistory from "./components/ColorsHistory";
-import ContextProvider from "./contexts/ContextProvider";
+import ColorContext from "./contexts/ColorContext";
+import LoginContext from "./contexts/LoginContext";
 
 function App() {
   return (
-    <ContextProvider>
-      <Header />
+    <ColorContext>
+      <LoginContext>
+        <Header />
+      </LoginContext>
       <div className="App">
         <div className="panel">
           <Card />
@@ -18,7 +21,7 @@ function App() {
           <ColorsHistory />
         </div>
       </div>
-    </ContextProvider>
+    </ColorContext>
   );
 }
 

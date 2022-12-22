@@ -1,6 +1,6 @@
 import "../styles/ColorsHistory.css";
 import clipboard from "./clipboard";
-import ColorContext from "../contexts/ColorContext";
+import { ColorContext } from "../contexts/ColorContext";
 import { useContext } from "react";
 
 export default function ColorsHistory({ colors }) {

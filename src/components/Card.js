@@ -1,4 +1,4 @@
-import ColorContext from "../contexts/ColorContext";
+import { ColorContext } from "../contexts/ColorContext";
 import "../styles/Card.css";
 import { useContext } from "react";
 

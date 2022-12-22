@@ -1,18 +1,22 @@
 import { useContext } from "react";
-import ColorContext from "../contexts/ColorContext";
+import { LoginContext } from "../contexts/LoginContext";
 import "../styles/Login.css";
 
 export default function Login({}) {
-  const Context = useContext(ColorContext);
+  const Context = useContext(LoginContext);
 
   return (
     <div className="user-card">
       <span className="material-symbols-outlined">account_circle</span>
       <span> {Context.user.name} </span>
       {Context.user.loggedIn ? (
-        <button className="logout-button">Log out</button>
+        <button onClick={Context.setUserLogout} className="logout-button">
+          Log out
+        </button>
       ) : (
-        <button className="login-button">Log in</button>
+        <button onClick={Context.setUserLogin} className="login-button">
+          Log in
+        </button>
       )}
     </div>
   );
